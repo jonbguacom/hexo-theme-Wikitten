@@ -69,6 +69,10 @@ comment:
     disqus: # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
     youyan: # enter youyan uid here
+    valine: 
+        enable: 
+        api_id: 
+        api_key: 
 
 # Share
 share: default # options: jiathis, bdshare, addtoany, default
