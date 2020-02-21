@@ -1,9 +1,18 @@
 <% if (typeof(isHead) !== 'undefined' && isHead) { %>
-    <% if (theme.plugins.lightgallery) { %>
-        <%- css('libs/lightgallery/css/lightgallery.min') %>
-    <% } %>
-    <% if (theme.plugins.justifiedgallery) { %>
-        <%- css('libs/justified-gallery/justifiedGallery.min.css') %>
+    <% if (theme.general.public_cdn) { %>
+        <% if (theme.plugins.lightgallery) { %>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css">
+        <% } %>
+        <% if (theme.plugins.justifiedgallery) { %>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+        <% } %>
+    <% } else { %>
+        <% if (theme.plugins.lightgallery) { %>
+            <%- css('libs/lightgallery/css/lightgallery.min') %>
+        <% } %>
+        <% if (theme.plugins.justifiedgallery) { %>
+            <%- css('libs/justified-gallery/justifiedGallery.min.css') %>
+        <% } %>
     <% } %>
     <% if (theme.plugins.google_analytics) { %>
         <%- partial('plugin/google-analytics') %>
@@ -15,19 +24,36 @@
         <%- partial('plugin/baidu-analytics') %>
     <% } %>
 <% } else { %>
-    <% if (theme.plugins.lightgallery) { %>
-        <%- js('libs/lightgallery/js/lightgallery.min') %>
-        <%- js('libs/lightgallery/js/lg-thumbnail.min') %>
-        <%- js('libs/lightgallery/js/lg-pager.min') %>
-        <%- js('libs/lightgallery/js/lg-autoplay.min') %>
-        <%- js('libs/lightgallery/js/lg-fullscreen.min') %>
-        <%- js('libs/lightgallery/js/lg-zoom.min') %>
-        <%- js('libs/lightgallery/js/lg-hash.min') %>
-        <%- js('libs/lightgallery/js/lg-share.min') %>
-        <%- js('libs/lightgallery/js/lg-video.min') %>
-    <% } %>
-    <% if (theme.plugins.justifiedgallery) { %>
-        <%- js('libs/justified-gallery/jquery.justifiedGallery.min.js') %>
+    <% if (theme.general.public_cdn) { %>
+        <% if (theme.plugins.lightgallery) { %>
+            <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-thumbnail.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-video.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-zoom.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-pager.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-share.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-hash.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-fullscreen.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-autoplay.min.js"></script>
+        <% } %>
+        <% if (theme.plugins.justifiedgallery) { %>
+            <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+        <% } %>
+    <% } else { %>
+        <% if (theme.plugins.lightgallery) { %>
+            <%- js('libs/lightgallery/js/lightgallery.min') %>
+            <%- js('libs/lightgallery/js/lg-thumbnail.min') %>
+            <%- js('libs/lightgallery/js/lg-pager.min') %>
+            <%- js('libs/lightgallery/js/lg-autoplay.min') %>
+            <%- js('libs/lightgallery/js/lg-fullscreen.min') %>
+            <%- js('libs/lightgallery/js/lg-zoom.min') %>
+            <%- js('libs/lightgallery/js/lg-hash.min') %>
+            <%- js('libs/lightgallery/js/lg-share.min') %>
+            <%- js('libs/lightgallery/js/lg-video.min') %>
+        <% } %>
+        <% if (theme.plugins.justifiedgallery) { %>
+            <%- js('libs/justified-gallery/jquery.justifiedGallery.min.js') %>
+        <% } %>
     <% } %>
     <% if (theme.plugins.mathjax) { %>
         <%- partial('plugin/mathjax') %>
