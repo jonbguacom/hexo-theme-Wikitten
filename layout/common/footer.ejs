@@ -1,8 +1,14 @@
 <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            <%= config.author || config.title %> &copy; <%= date(new Date(), 'YYYY') %> 
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" /></a>
+            <%= config.author || config.title %> &copy; <%= date(new Date(), 'YYYY') %>
+
+            <% if (theme.general.public_cdn.radical) { %>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://cdn.jsdelivr.net/gh/jianggua/hexo-theme-wikitten@master/source/images/by-nc-sa-80x15.png" /></a>
+            <% } else { %>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" /></a>
+            <% } %>
+            
             <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/JiangGua/hexo-theme-Wikitten">wikitten</a>
             <% if (theme.footer.beian) { %>
                 <br><a href="http://beian.miit.gov.cn/" target="_blank" style="color: #565a5f;"><%= theme.footer.beian %></a>
