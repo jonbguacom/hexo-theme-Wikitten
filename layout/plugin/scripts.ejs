@@ -1,5 +1,5 @@
 <% if (typeof(isHead) !== 'undefined' && isHead) { %>
-    <% if (theme.general.public_cdn) { %>
+    <% if (theme.general.public_cdn.enable) { %>
         <% if (theme.plugins.lightgallery) { %>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css">
         <% } %>
@@ -24,7 +24,7 @@
         <%- partial('plugin/baidu-analytics') %>
     <% } %>
 <% } else { %>
-    <% if (theme.general.public_cdn) { %>
+    <% if (theme.general.public_cdn.enable) { %>
         <% if (theme.plugins.lightgallery) { %>
             <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-thumbnail.min.js"></script>

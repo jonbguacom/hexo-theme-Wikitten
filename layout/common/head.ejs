@@ -54,7 +54,7 @@
         <link rel="icon" href="<%- url_for(theme.customize.favicon) %>" />
     <% } %>
 
-    <% if (theme.general.public_cdn) { %>
+    <% if (theme.general.public_cdn.enable) { %>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
         <%- css('libs/open-sans/styles') %>
         <%- css('libs/source-code-pro/styles') %>
@@ -73,7 +73,12 @@
     <% } %>
 
     <%- partial('plugin/scripts', { isHead: true }) %>
+
     <% if (theme.plugins.busuanzi_count) { %>
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <% if (theme.general.public_cdn.radical) { %>
+            <script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script>
+        <% } else { %>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <% } %>
     <% } %>
 </head>
