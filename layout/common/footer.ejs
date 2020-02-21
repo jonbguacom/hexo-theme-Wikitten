@@ -8,7 +8,7 @@
             <% } else { %>
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" /></a>
             <% } %>
-            
+
             <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/JiangGua/hexo-theme-Wikitten">wikitten</a>
             <% if (theme.footer.beian) { %>
                 <br><a href="http://beian.miit.gov.cn/" target="_blank" style="color: #565a5f;"><%= theme.footer.beian %></a>
@@ -21,7 +21,13 @@
             <% } %>
             <% if (theme.footer.upyun) { %>
                 <div class="upyun-logo">
-                    <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="images/upyun_logo.png" alt="又拍云" width="10%"/></a>
+                    <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+                        <% if (theme.general.public_cdn.radical) { %>
+                            <img src="https://cdn.jsdelivr.net/gh/jianggua/hexo-theme-wikitten@master/source/images/upyun_logo.png" alt="又拍云" width="10%"/>
+                        <% } else { %>
+                            <img src="images/upyun_logo.png" alt="又拍云" width="10%"/>
+                        <% } %>
+                    </a>
                 </div>
             <% } %>
         </div>
