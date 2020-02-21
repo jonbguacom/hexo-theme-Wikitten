@@ -2,4 +2,8 @@
 <%- partial('plugin/scripts') %>
 
 <!-- Custom Scripts -->
-<%- js('js/main') %>
+<% if (theme.general.public_cdn.radical) { %>
+    <script src="https://cdn.jsdelivr.net/gh/jianggua/hexo-theme-wikitten@master/source/js/main.js"></script>
+<% } else { %>
+    <%- js('js/main') %>
+<% } %>
