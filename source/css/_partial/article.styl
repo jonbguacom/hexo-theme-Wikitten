@@ -427,7 +427,10 @@ ol.toc
 #toc
     line-height 1em
     font-size 0.8em
-    float right
+    @media mq-tablet
+        float right
+    @media mq-normal
+        float right
     .toc
         padding 0
         li
