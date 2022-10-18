@@ -55,13 +55,13 @@
     <% } %>
 
     <% if (theme.general.public_cdn.enable) { %>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <%- css('libs/open-sans/styles') %>
         <%- css('libs/source-code-pro/styles') %>
 
         <%- css('css/style') %>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
+        <script src="https://lib.baomitu.com/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://lib.baomitu.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <% } else { %>
         <%- css('libs/font-awesome/css/font-awesome.min') %>
         <%- css('libs/open-sans/styles') %>
@@ -76,7 +76,7 @@
 
     <% if (theme.plugins.busuanzi_count) { %>
         <% if (theme.general.public_cdn.radical) { %>
-            <script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script>
+            <script async src="https://lib.baomitu.com/busuanzi/2.3.0/bsz.pure.mini.min.js"></script>
         <% } else { %>
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         <% } %>
